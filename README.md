@@ -13,7 +13,10 @@ Welcome to Members Only!
   - Lets you see usernames and dates.
 - Solve the [puzzle](/puzzle) to attain "Admin" status and delete messages!
 
+**Links**
 
+- [Live on Glitch.com](https://spangled-gilded-attraction.glitch.me/)
+- [Public Repo on GitHub](https://github.com/cursebreakers/members-only)
 
 ## Credits & Acknowledgements
 
@@ -55,11 +58,6 @@ Esau @[Cursebreakers LLC](https://cursebreakers.net)
     - set-value
     - url-parse
     - winston
-
-**Links**
-
-- [Live on Glitch.com]()
-- [Public Repo on GitHub]()
 
 **Puzzle**
 
