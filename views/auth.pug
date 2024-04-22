@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  div.logIn
+    h1= title
+
+    if errors && errors.length > 0
+      br
+      ul
+        each error in errors
+          li= error
+          
+    form.loginForm(action="/auth", method="POST")
+      label(for="username") Username:
+      input(type="text", id="username", name="username", required)
+      br 
+      label(for="password") Password:
+      input(type="password", id="password", name="password", required)
+      br
+      button(type="submit") Log in
+
+    br      
+    a.signUpLnk(href=`/auth/new`) Sign-up
+  

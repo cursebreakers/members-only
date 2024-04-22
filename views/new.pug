@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.newMessage
+    h1= title  
+    form.messageForm(action="/dashboard/messages", method="POST")
+      h2 Type your message:
+      label(for="title") Subject/Titile:
+      input(type="text", id="title", name="title", required)
+      
+      label(for="content") Message:
+      textarea(id="content", name="content", rows="4", required)
+      
+      button(type="submit") Post
+
+    br
+    div.buttonBracer
+      a.cancel(href=`/dashboard`) Cancel

@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  div.signUp
+    h1= title
+  
+    if errors && errors.length > 0
+      br
+      ul
+        each error in errors
+          li= error
+
+    br      
+    form.signupForm(action="/auth/new", method="POST")
+      label(for="firstName") First Name:
+      input(type="text", id="firstName", name="firstName", required)
+      br
+      label(for="lastName") Last Name:
+      input(type="text", id="lastName", name="lastName", required)
+      br
+      label(for="username") Username:
+      input(type="text", id="username", name="username", required)
+      br
+      label(for="email") Email:
+      input(type="email", id="email", name="email", required)
+      br
+      label(for="password") Password:
+      input(type="password", id="password", name="password", required)
+      br
+      label(for="confirmPassword") Confirm Password:
+      input(type="password", id="confirmPassword", name="confirmPassword", required)
+      br
+      button(type="submit") Sign Up

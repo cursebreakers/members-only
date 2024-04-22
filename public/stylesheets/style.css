@@ -1,0 +1,315 @@
+* {
+  font-family: 'mont', 'dmsans', 'robomono';
+  background-color: #111;
+  color: aquamarine;
+}
+
+
+@font-face {
+  font-family: 'mont';
+  src: url('../font/mont.otf') format('opentype');
+}
+
+
+@font-face {
+  font-family: 'dmsans';
+  src: url('../font/dmsans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'robomono';
+  src: url('../font/robomono.ttf') format('truetype');
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #5FBFF9;
+  font-size: 18px;
+}
+
+p {
+  font-size: 18px;
+  color: #EFE9F4;
+}
+
+ul {
+  max-width: 420px;
+}
+
+li {
+  padding: 4px;
+  font-size: 16px;
+  color: #EFE9F4;
+}
+
+.headerBrick {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  padding: 24px;
+  border-bottom: 1px solid #5FBFF9;
+}
+
+.menuBrick {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #5FBFF9;
+}
+
+.menuBrick > a {
+  padding: 16px;
+  background-color: transparent;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menuBrick > a:hover {
+  background-color: #7fffd4;
+  color: #111;
+}
+
+
+.readMeLnk {
+  font-family: 'robomono';
+}
+
+.markdownDiv > p {
+  padding: 12px;
+  font-family: 'robomono';
+}
+
+.markdownDiv li {
+  font-family: 'robomono';
+}
+
+.markdownDiv li > p {
+  font-family: 'robomono';
+}
+
+.markdownDiv strong, em {
+  font-family: 'robomono';
+}
+
+.markdownDiv h1 {
+  padding: 12px;
+  font-family: 'robomono';
+}
+
+.markdownDiv h2 {
+  padding: 12px;
+  font-family: 'robomono';
+}
+
+.markdownDiv h3 {
+  padding: 12px;
+  font-family: 'robomono';
+}
+
+.logHead {
+  text-align: center;
+}
+
+.logIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid #5FBFF9;
+}
+
+.loginForm > label {
+  margin: 4px;
+  font-weight: 600;
+}
+
+.loginForm > input {
+  margin: 4px;
+}
+
+.loginForm > button {
+  margin: 4px;
+  padding: 8px;
+}
+
+.signUpLnk {
+  padding: 24px;
+  text-decoration: none;
+}
+
+.signUp {
+  padding: 24px;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid #5FBFF9;
+}
+
+.signupForm > label {
+  margin: 4px;
+  font-weight: 600;
+}
+
+.signupForm > input {
+  margin: 4px;
+}
+
+.signupForm > button {
+  margin: 4px;
+  padding: 8px;
+}
+
+.buttonBracer {
+  padding: 24px;
+}
+
+.dashHead {
+  padding: 24px;
+}
+
+.dashMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.dashBody {
+  padding: 12px;
+  margin: 12px;
+  border: 1px solid #EFE9F4
+}
+
+.dashFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cancel {
+  color: hsl(326, 100%, 47%);
+}
+
+.messageBoard {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.newMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.messageForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid #5FBFF9;
+}
+
+.messageForm > label {
+  margin: 12px;
+}
+
+.messageForm > input {
+  margin: 12px;
+}
+
+.messageForm > button {
+  margin: 12px;
+}
+
+.messageBlock {
+  padding: 12px;
+  border: 1px ridge #7fffd4
+}
+
+.clearBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clearForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid #5FBFF9;
+}
+
+.clearFormm > label {
+  margin: 12px;
+}
+
+.clearFormm > input {
+  margin: 12px;
+}
+
+.clearFormm > button {
+  margin: 12px;
+}
+
+.puzzle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.puzzleForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  border: 2px solid #5FBFF9;
+}
+
+.puzzleForm > label{
+  margin: 12px;
+  font-style: italic;
+}
+
+.puzzleForm > input {
+  margin: 8px;
+}
+
+.puzzleForm > button{
+  margin: 8px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.footBrick {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  margin: 0;
+}
+

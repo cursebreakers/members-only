@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  div.dashHead
+    h1= title
+    div.dashProfile
+      h2 Hello, #{userData.username}!
+      h3 #{userData.membershipStatus} 
+      p Posts made: #{userData.messageCount}
+
+
+  div.dashMenu
+    div.buttonBracer
+      a(href="/dashboard/messages") New Message
+    if userData.membershipStatus.includes('admin')
+      div.buttonBracer
+        a.cancel(href=`/dashboard/messages/delete-all`) Clear Board
+  div.dashBody
+    h3 Messages:
+    div.messageBoard
+      if messages.length > 0
+        each message in messages
+          div.messageBlock
+            h3= message.title
+            p= message.content
+            if userData.membershipStatus.includes('admin')
+              h3= message.username
+              p= message.timestamp
+              form(action="/dashboard/messages/delete", method="POST")
+                input(type="hidden", name="messageId", value=message._id)
+                button(type="submit") Delete
+
+            else if userData.membershipStatus.includes('member')
+              h3= message.username
+              p= message.timestamp
+              a.tagline(href=`/puzzle`) Solve the puzzle to gain "admin" privellegs!
+
+            else
+              p.tagline Post 12x messages to become a member and see usernames!
+
+      else
+        p No messages found.
+
+  div.dashFoot
+    div.buttonBracer
+      a.cancel(href="/auth/out") Log out

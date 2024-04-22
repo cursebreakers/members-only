@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div.clearBoard
+    h1= title  
+    form.clearForm(action="/dashboard/messages/delete-all", method="POST")
+      h2 Confirm delete all: 
+      p This action cannot be undone.  
+      button(type="submit") Confirm
+
+    br
+    div.buttonBracer
+      a.cancel(href=`/dashboard`) Cancel

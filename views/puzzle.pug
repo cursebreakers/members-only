@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  div.puzzle
+    h1= title  
+    form.puzzleForm(action="/puzzle", method="POST")
+      h2 Privellege Escalation:
+      label(for="puzzleInput") You are who you want to be.
+      input(id="puzzleInput", name="puzzleInput", type="text")
+      button(type="submit") Submit
+
+    if error
+      p.error= error  
+
+    br
+    div.buttonBracer
+      a(href=`/`) README.md
+    div.buttonBracer
+      a(href=`/dashboard`) Dashboard
